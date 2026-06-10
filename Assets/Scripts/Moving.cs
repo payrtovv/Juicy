@@ -14,7 +14,6 @@ public class Moving : MonoBehaviour
     // Referencia al Animator
     private Animator anim;
     private AudioSource audioSource;
-    public ParticleSystem particulasCaida;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,7 +32,6 @@ public class Moving : MonoBehaviour
 
             // Se activa una sola vez
             anim.SetTrigger("Jump");
-            particulasCaida.Play();
             
             anim.SetBool("isGrounded", false);
             audioSource.Play();
@@ -53,18 +51,7 @@ public class Moving : MonoBehaviour
         // Si la magnitud del movimiento es mayor a 0, está corriendo
         bool moving = moveDirection.magnitude > 0.1f;
         anim.SetBool("IsMoving", moving);
-        var emission = particulasCaida.emission;
 
-        // Solo emite si está en el suelo Y se está moviendo
-        if (isGrounded && moving)
-        {
-            emission.enabled = true;
-        }
-        else
-        {
-            emission.enabled = false;
-        }
-        camScript.isShaking = (isGrounded && moving);
 
     }
 
