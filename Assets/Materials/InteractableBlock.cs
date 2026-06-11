@@ -31,9 +31,6 @@ public class InteractableBlock : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Lógica que ocurre cuando el bloque se rompe por completo.
-    /// </summary>
     private void BreakBlock()
     {
         Debug.Log($"El bloque '{blockName}' ha sido destruido.");
