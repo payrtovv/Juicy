@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5846d9b50f9a24c43a014163ea058f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreEscenaDestino: Dim_1
+  nombreEscenaDestino: Dim_1Prueba
   etiquetaJugador: Player
 --- !u!65 &1707362639
 BoxCollider:
@@ -4012,7 +4012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nivelActual: 1
   fuerzaMinado: 1
-  monedasActuales: 100
+  monedasActuales: 0
   costoBaseMejora: 50
 --- !u!4 &1763049547
 Transform:

@@ -123,5 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockName: Diamante
   blockLevel: 1
-  maxClicksRequired: 15
-  monedasAlRomper: 40
+  maxClicksRequired: 40
+  monedasAlRomper: 30
+  sonidoMoneda: {fileID: 8300000, guid: a0ebea0dea412584481216b194c32e45, type: 3}

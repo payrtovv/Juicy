@@ -123,5 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockName: Hierro
   blockLevel: 1
-  maxClicksRequired: 6
-  monedasAlRomper: 10
+  maxClicksRequired: 10
+  monedasAlRomper: 8
+  sonidoMoneda: {fileID: 8300000, guid: a0ebea0dea412584481216b194c32e45, type: 3}

@@ -123,5 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockName: Piedra
   blockLevel: 1
-  maxClicksRequired: 2
-  monedasAlRomper: 1
+  maxClicksRequired: 4
+  monedasAlRomper: 2
+  sonidoMoneda: {fileID: 8300000, guid: a0ebea0dea412584481216b194c32e45, type: 3}
