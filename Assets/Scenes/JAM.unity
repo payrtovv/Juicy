@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5846d9b50f9a24c43a014163ea058f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreEscenaDestino: 
+  nombreEscenaDestino: Dim_1Prueba
   etiquetaJugador: Player
 --- !u!65 &1707362639
 BoxCollider:

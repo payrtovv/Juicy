@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1906340597514021460}
   - component: {fileID: 1145721498359933910}
   - component: {fileID: -6000333987549203408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Carbon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -123,4 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockName: Carbon
   blockLevel: 1
-  maxClicksRequired: 3
+  maxClicksRequired: 5
+  monedasAlRomper: 4
