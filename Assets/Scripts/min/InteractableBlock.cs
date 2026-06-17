@@ -59,7 +59,16 @@ public class InteractableBlock : MonoBehaviour
         ControladorPico.Instancia.monedasActuales += monedasAlRomper;
         Debug.Log($" ¡Ganaste {monedasAlRomper} monedas! Total actual: {ControladorPico.Instancia.monedasActuales}");
 
-        // Aquí puedes instanciar partículas de destrucción o soltar un ítem antes de destruir el objeto
+        // --- NUEVO: ENVIAR INFORMACIÓN AL CANVAS PARA EL TEXTO FLOTANTE ---
+        if (CoinCanvasManager.Instancia != null)
+        {
+            CoinCanvasManager.Instancia.SpawnCoinText(monedasAlRomper);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró CoinCanvasManager en la escena para mostrar el texto.");
+        }
+        // ------------------------------------------------------------------
 
         Destroy(gameObject);
     }
