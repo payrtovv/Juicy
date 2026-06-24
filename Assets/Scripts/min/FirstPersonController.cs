@@ -13,6 +13,10 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float lookSpeed = 2.0f;
     [SerializeField] private float lookXLimit = 85.0f;
 
+    [Header("Animación")]
+    [Tooltip("Referencia al Animator que contiene el trigger 'min'")]
+    [SerializeField] private Animator animator;
+
     // Referencias internas
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
@@ -78,5 +82,18 @@ public class FirstPersonController : MonoBehaviour
 
         // 4. Mover el Character Controller
         characterController.Move(moveDirection * Time.deltaTime);
+
+        // 5. Lógica de Acción (Clic izquierdo para minar)
+        if (canMove && Input.GetMouseButtonDown(0)) // 0 es el clic izquierdo
+        {
+            if (animator != null)
+            {
+                animator.SetTrigger("min");
+            }
+            else
+            {
+                Debug.LogWarning("¡Falta asignar el Animator en el inspector del FirstPersonController!");
+            }
+        }
     }
 }
