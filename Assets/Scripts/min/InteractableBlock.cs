@@ -48,6 +48,17 @@ public class InteractableBlock : MonoBehaviour
 
         Debug.Log($"¡Golpe a {blockName}! Fuerza aplicada: {fuerzaDelPico} | Vida restante del bloque: {Mathf.Max(0, currentHealth)}/{maxClicksRequired}");
 
+        // --- NUEVO: Actualizamos la UI del Canvas ---
+        if (BlockUIManager.Instancia != null)
+        {
+            BlockUIManager.Instancia.MostrarVida(blockName, currentHealth, maxClicksRequired);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró BlockUIManager en la escena.");
+        }
+        // --------------------------------------------
+
         // 4. Comprobar si el bloque se quedó sin vida
         if (currentHealth <= 0)
         {
@@ -85,6 +96,12 @@ public class InteractableBlock : MonoBehaviour
         }
 
         // 4. DESTRUCCIÓN: Desaparece el bloque del mapa
+        if (BlockUIManager.Instancia != null)
+        {
+            BlockUIManager.Instancia.OcultarVida();
+        }
+        // ----------------------------------------------------------
+
         Destroy(gameObject);
     }
 }
